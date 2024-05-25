@@ -1,0 +1,13 @@
+
+<div th:fragment="header">
+    <h2>Website cửa hàng</h2>
+    <div style="float: right; text-align: right;">
+        <div th:if="${loginForm}">
+            Xin chào: <b th:text="${loginForm.username}"></b>
+            <a th:href="@{/logout}">Đăng xuất</a>
+        </div>
+        <div th:unless="${loginForm}">
+            <a th:href="@{/login}">Đăng nhập</a>
+        </div>
+    </div>
+</div>
